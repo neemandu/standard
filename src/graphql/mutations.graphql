@@ -1,0 +1,67 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateStandard(
+  $input: CreateStandardInput!
+  $condition: ModelStandardConditionInput
+) {
+  createStandard(input: $input, condition: $condition) {
+    id
+    coaches {
+      id
+      firstName
+      lastName
+      niche
+      city
+      email
+      phone
+      facebookUrl
+      instagramUrl
+      youtubeUrl
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateStandard(
+  $input: UpdateStandardInput!
+  $condition: ModelStandardConditionInput
+) {
+  updateStandard(input: $input, condition: $condition) {
+    id
+    coaches {
+      id
+      firstName
+      lastName
+      niche
+      city
+      email
+      phone
+      facebookUrl
+      instagramUrl
+      youtubeUrl
+    }
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteStandard(
+  $input: DeleteStandardInput!
+  $condition: ModelStandardConditionInput
+) {
+  deleteStandard(input: $input, condition: $condition) {
+    id
+    coaches {
+      id
+      firstName
+      lastName
+      niche
+      city
+      email
+      phone
+      facebookUrl
+      instagramUrl
+      youtubeUrl
+    }
+    createdAt
+    updatedAt
+  }
+}
