@@ -6,10 +6,12 @@ import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MarketingComponent } from './marketing/marketing.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MarketingComponent
   ],
   imports: [
     BrowserModule,
