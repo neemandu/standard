@@ -1,6 +1,15 @@
-<ul>
-    <li style="direction: rtl; text-align: right; padding-right: 50px; font-size: 50px;" *ngFor="let match of matches">
-      {{match}}
-    </li>
-</ul>
-
+<div class="content" role="main">
+    <div class="card container">
+      <div class="form-group" style="direction: rtl">     
+        <input style="direction: rtl; align-self: right; padding-right: 30px; font-size: 30px;" type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="חפש מאמן..." 
+          autofocus>
+      </div>
+      <ul class="list-group list-group-flush">
+        <!-- results of ngFor is passed to appFilter with argument searchText -->
+        <li style="padding: 7px; direction: rtl; text-align: right; padding-right: 30px; font-size: 30px;" class="list-group-item" *ngFor="let match of matches | appFilter: searchText">
+          {{match}}
+        </li>
+      </ul>
+    </div>
+  </div>
