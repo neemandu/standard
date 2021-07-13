@@ -19,9 +19,7 @@ export class MarketingComponent implements OnInit {
   constructor(private api: APIService) { }
 
   ngOnInit(): void {
-  this.api.ListStandards().then(standard => {
-    
-    this.allCoaches = standard;
+    this.allCoaches = this.getCoaches();
     let now =  new Date();
     let start = new Date(2021, 1, 1, 0, 0, 0);
     
@@ -34,11 +32,11 @@ export class MarketingComponent implements OnInit {
       }
     }
     console.log(this.counter);
-    for(var i =0 ; i< this.allCoaches.items[0].coaches.length; i++){
-      console.log(this.allCoaches.items[0].coaches[i]);
+    for(var i =0 ; i< this.allCoaches.length; i++){
+      console.log(this.allCoaches[i]);
     }
-    for(var i =0 ; i< this.allCoaches.items[0].coaches.length; i++){
-      let currCoach = this.allCoaches.items[0].coaches[i];
+    for(var i =0 ; i< this.allCoaches.length; i++){
+      let currCoach = this.allCoaches[i];
       console.log(currCoach.firstName);
       console.log("i: " + i);
       let otherIndex = i;
@@ -50,8 +48,8 @@ export class MarketingComponent implements OnInit {
           console.log("otherIndex == i 1");
           otherIndex++;
         }
-        if(otherIndex == this.allCoaches.items[0].coaches.length){
-          console.log("otherIndex == this.allCoaches.items[0].coaches.length");
+        if(otherIndex == this.allCoaches.length){
+          console.log("otherIndex == this.allCoaches.length");
           otherIndex = 0;
         }
         if(otherIndex == i){
@@ -63,15 +61,151 @@ export class MarketingComponent implements OnInit {
       console.log('FINAL otherIndex: ' + otherIndex);
       this.matches.push(currCoach.firstName + " " + currCoach.lastName + 
        " משווק/ת את " + 
-       this.allCoaches.items[0].coaches[otherIndex].firstName + " "
-       + this.allCoaches.items[0].coaches[otherIndex].lastName
+       this.allCoaches[otherIndex].firstName + " "
+       + this.allCoaches[otherIndex].lastName
        )
     }
     console.log(this.matches);
-  });
-
   }
 
+  getCoaches(){
+    let coaches =  [
+      {
+        "city": "מיתר",
+        "email": "neemandu@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "דודי",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "נאמן",
+        "niche": "יציאה מהתלם",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "בן",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "מיכאל",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "לילך",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "גוטמן",
+        "niche": "שינוי קריירה",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "אלכס",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "מישלין",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "עליזה",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "לוי",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "שני",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "נגב",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "ענבר",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "אברג'יל",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "ורד",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "פיאנקו-יהלום",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "שירה",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "שוורץ",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "ירדן",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "פינקלשטיין",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "טליה",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "ניניו",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      }
+    ];
+
+    return coaches;
+  }
   
   getDatesBetweenStartEnd(start: Date, end: Date): any[] {
     var dates = [];
