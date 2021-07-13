@@ -14,6 +14,7 @@ export class MarketingComponent implements OnInit {
   counter = 0;
   matches: any[] = [];
   searchText = '';
+  lastDate = 1;
 
   constructor(private api: APIService) { }
 
@@ -28,8 +29,8 @@ export class MarketingComponent implements OnInit {
     for(var i =0 ; i< this.dates.length; i++){
       let day = this.dates[i].getDate();
       if(day == 1 || day == 11 || day == 21){
-        console.log(this.dates[i]);
         this.counter++;
+        this.lastDate = day;
       }
     }
     console.log(this.counter);
