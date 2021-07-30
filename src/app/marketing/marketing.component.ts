@@ -113,7 +113,7 @@ export class MarketingComponent implements OnInit {
         "firstName": "אלכס",
         "id": "",
         "instagramUrl": "https://www.instagram.com/dudi_neeman/",
-        "lastName": "מישלין",
+        "lastName": "מיכלין",
         "niche": "יציאה מהארון",
         "phone": "0549139859",
         "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
