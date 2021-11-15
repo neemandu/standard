@@ -10,14 +10,6 @@
       "StackName": "amplify-standard-dev-115553",
       "StackId": "arn:aws:cloudformation:eu-west-2:150827790089:stack/amplify-standard-dev-115553/fa94ed50-e2ee-11eb-94d3-0670fa945c24",
       "AmplifyAppId": "ddhgeqg2yoymf"
-    },
-    "categories": {
-      "function": {
-        "GetMarketingRound": {
-          "deploymentBucketName": "amplify-standard-dev-115553-deployment",
-          "s3Key": "amplify-builds/GetMarketingRound-3547556435744d353467-build.zip"
-        }
-      }
     }
   }
 }
