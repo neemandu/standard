@@ -26,7 +26,7 @@ export class MarketingComponent implements OnInit {
     this.dates = this.getDatesBetweenStartEnd(start, now);
     for(var i =0 ; i< this.dates.length; i++){
       let day = this.dates[i].getDate();
-      if(day == 1 || day == 11 || day == 21){
+      if(i % 20 == 0){
         this.counter++;
         this.lastDate = day;
       }
