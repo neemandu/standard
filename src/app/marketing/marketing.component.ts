@@ -21,7 +21,7 @@ export class MarketingComponent implements OnInit {
   ngOnInit(): void {
     this.allCoaches = this.getCoaches();
     let now =  new Date();
-    let start = new Date(2021, 1, 4, 0, 0, 0);
+    let start = new Date(2021, 10, 2, 0, 0, 0);
     
     this.dates = this.getDatesBetweenStartEnd(start, now);
     for(var i =0 ; i< this.dates.length; i++){

@@ -10,6 +10,15 @@
       "StackName": "amplify-standard-dev-115553",
       "StackId": "arn:aws:cloudformation:eu-west-2:150827790089:stack/amplify-standard-dev-115553/fa94ed50-e2ee-11eb-94d3-0670fa945c24",
       "AmplifyAppId": "ddhgeqg2yoymf"
+    },
+    "categories": {
+      "function": {
+        "NotifyMarketing": {
+          "sesEmail": "support@mentor-cards.com",
+          "deploymentBucketName": "amplify-standard-dev-115553-deployment",
+          "s3Key": "amplify-builds/NotifyMarketing-4e476250594e5a702b72-build.zip"
+        }
+      }
     }
   }
 }
