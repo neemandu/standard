@@ -206,10 +206,10 @@ export class MarketingComponent implements OnInit {
         "city": "תל אביב",
         "email": "tv@gmail.com",
         "facebookUrl": "https://www.facebook.com/dudi.neeman",
-        "firstName": "גיא שרבני",
+        "firstName": "גיא",
         "id": "",
         "instagramUrl": "https://www.instagram.com/dudi_neeman/",
-        "lastName": "בר",
+        "lastName": "שרבני",
         "niche": "יציאה מהארון",
         "phone": "0549139859",
         "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
