@@ -146,10 +146,10 @@ export class MarketingComponent implements OnInit {
         "city": "תל אביב",
         "email": "tv@gmail.com",
         "facebookUrl": "https://www.facebook.com/dudi.neeman",
-        "firstName": "רונית",
+        "firstName": "קרן",
         "id": "",
         "instagramUrl": "https://www.instagram.com/dudi_neeman/",
-        "lastName": "גינצבורג",
+        "lastName": "פפושדו",
         "niche": "יציאה מהארון",
         "phone": "0549139859",
         "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
@@ -174,6 +174,18 @@ export class MarketingComponent implements OnInit {
         "id": "",
         "instagramUrl": "https://www.instagram.com/dudi_neeman/",
         "lastName": "בר",
+        "niche": "יציאה מהארון",
+        "phone": "0549139859",
+        "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
+      },
+      {
+        "city": "תל אביב",
+        "email": "tv@gmail.com",
+        "facebookUrl": "https://www.facebook.com/dudi.neeman",
+        "firstName": "איציק",
+        "id": "",
+        "instagramUrl": "https://www.instagram.com/dudi_neeman/",
+        "lastName": "חלפון",
         "niche": "יציאה מהארון",
         "phone": "0549139859",
         "youtubeUrl": "https://www.youtube.com/channel/UCB-D99HqWR_lY_EupUuwz_w"
